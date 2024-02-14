@@ -47,6 +47,7 @@ https://webostv.developer.lge.com/develop/tools/cli-dev-guide#ares-install
 
 <br/>
 
-## Luna Servcie API - MRCU Service
+## Luna Service API - MRCU Service
 
 If you want to see details about the MRCU Service API, please refer to this url. <br />
+https://webostv.developer.lge.com/develop/references/magic-remote
