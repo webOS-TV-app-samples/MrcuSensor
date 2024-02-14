@@ -1,4 +1,4 @@
-# com.test.app.mrcu-sensor
+# MrcuSensor
 
 This project is a sample app that uses **MRCU Luna Service API.**
 
