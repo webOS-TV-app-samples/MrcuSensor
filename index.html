@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Motion Sensor Data-Based App</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/gameRotVec.css" />
+    <link rel="stylesheet" type="text/css" href="./css/gyroaccel.css" />
+    <link rel="stylesheet" type="text/css" href="./css/pedometer.css" />
+    <link rel="stylesheet" type="text/css" href="./css/option.css" />
+    <script src="./lib/webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+    <script src="./lib/webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./js/components/optionInterval.js"></script>
+    <script type="module" src="./js/components/ctrlGuide.js"></script>
+    <script type="module" src="./js/components/graphBar.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">Motion Sensor Data-Based App</div>
+      <div class="sub_title">Game Rotation Vector</div>
+      <div class="top_btn_wrapper">
+        <!-- OPTION BUTTON -->
+        <button id="option_btn" class="top_btn option">
+          <img src="./assets/ic_more_option_n.png" class="option" alt="option_button" />
+          <img src="./assets/ic_more_option_f.png" class="option" alt="option_button" />
+        </button>
+        <div class="option_container">
+          <!-- OPTION_MAIN PAGE -->
+          <div class="option_wrapper main">
+            <div class="option_title">Options</div>
+            <ul class="option_list">
+              <li class="option_item first">Set Sensor Interval</li>
+            </ul>
+          </div>
+          <!-- OPTION_INTERVAL -->
+          <div class="option_wrapper first">
+            <option-interval></option-interval>
+          </div>
+        </div>
+        <!-- CLOSE BUTTON-->
+        <button id="close_btn" class="top_btn close">
+          <img src="./assets/ic_close_n.png" alt="close_button" />
+          <img src="./assets/ic_close_f.png" alt="close_button" />
+        </button>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <div class="main_container">
+      <!-- TAB MENU -->
+      <div class="menu_bar">
+        <div class="menu_item active" id="grv_btn">Game Rotation Vector</div>
+        <div class="menu_item" id="gyac_btn">Gyroscope / Accelerometer</div>
+        <div class="menu_item" id="s_btn">Step Counter</div>
+      </div>
+      <div class="main_wrapper">
+        <!-- GAME ROTATION VECTOR -->
+        <div class="grv_wrapper">
+          <div class="ctrl_wrapper">
+            <ctrl-guide name="get_guide" color="red"></ctrl-guide>
+            <ctrl-guide name="reset_mrcu_guide" color="green"></ctrl-guide>
+            <ctrl-guide name="cursor_guide" color="yellow"></ctrl-guide>
+          </div>
+          <div class="canvas_wrapper">
+            <div class="canvas_title">Game Rotation Vector</div>
+            <div id="canvas"></div>
+          </div>
+          <div id="sensor_data" class="sensor_data">
+            <div id="q_data" class="item_w">
+              <div class="item_content">
+                <div id="x" class="item">x :</div>
+                <div id="y" class="item">y :</div>
+                <div id="z" class="item">z :</div>
+                <div id="w" class="item">w :</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GYROSCOPE & ACCELEROMETER -->
+        <div class="gyac_wrapper">
+          <div class="ctrl_wrapper">
+            <ctrl-guide name="get_guide" color="red"></ctrl-guide>
+            <ctrl-guide name="cursor_guide" color="yellow"></ctrl-guide>
+          </div>
+          <div class="graph_container">
+            <div class="graph_wrapper gyro">
+              <div class="graph_title">Gyroscope</div>
+              <graph-bar i="gx_bar" text="x"></graph-bar>
+              <graph-bar i="gy_bar" text="y"></graph-bar>
+              <graph-bar i="gz_bar" text="z"></graph-bar>
+              <graph-bar i="gt_bar" text="total"></graph-bar>
+            </div>
+            <div class="graph_wrapper accel">
+              <div class="graph_title">Accelerometer</div>
+              <graph-bar i="ax_bar" text="x"></graph-bar>
+              <graph-bar i="ay_bar" text="y"></graph-bar>
+              <graph-bar i="az_bar" text="z"></graph-bar>
+              <graph-bar i="at_bar" text="total"></graph-bar>
+            </div>
+          </div>
+        </div>
+
+        <!-- PEDOMETER -->
+        <div class="step_wrapper">
+          <div class="ctrl_wrapper">
+            <ctrl-guide name="get_guide" color="red"></ctrl-guide>
+            <ctrl-guide name="cursor_guide" color="yellow"></ctrl-guide>
+            <ctrl-guide name="reset_count_guide" color="blue"></ctrl-guide>
+          </div>
+          <video id="step_video" width="1220px" src="./assets/walking_video.mp4" loop muted></video>
+          <div class="step_guide">Getting data is stopped.</div>
+          <div class="cnt_wrapper">
+            <div>Steps :</div>
+            <div class="cnt_box">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

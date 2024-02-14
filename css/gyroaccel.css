@@ -1,0 +1,110 @@
+/* GYRO ACC - GRAPH */
+.gyac_wrapper {
+  position: relative;
+}
+
+.gyac_wrapper .graph_container {
+  position: relative;
+  display: flex;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 620px;
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper.gyro {
+  margin-right: 20px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .graph_title {
+  margin-right: auto;
+  font-size: 32px;
+  font-weight: 600;
+  color: #cf0652;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper.accel .graph_title {
+  color: #7149c6;
+}
+
+element.style {
+  position: relative;
+  width: 90%;
+  margin: 62px 0;
+}
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper {
+  position: relative;
+  width: 90%;
+  margin: 62px 0;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper .bar_label {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper:last-child .bar_label {
+  left: 32px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper .pmz {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: #3e454d;
+  font-size: 16px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper .bar_back {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper .bar_back .bar {
+  position: absolute;
+  height: 100%;
+  background-color: #cf0652;
+  left: 50%;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper.accel .bar_wrapper .bar_back .bar {
+  background-color: #7149c6;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper:last-child .bar_back .bar {
+  left: 0;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper .bar_value {
+  width: 150px;
+  text-align: left;
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+}
+
+.gyac_wrapper .graph_container .graph_wrapper .bar_wrapper:last-child .bar_value {
+  top: 20px;
+  left: 80px;
+}

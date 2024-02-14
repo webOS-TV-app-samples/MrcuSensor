@@ -1,0 +1,11 @@
+{
+  "id": "com.app.mrcu.sample",
+  "version": "0.0.7",
+  "vendor": "LGE",
+  "type": "web",
+  "main": "index.html",
+  "title": "Proto test app for MRCU Sensor",
+  "icon": "mrcu_icon.jpg",
+  "requiredPermissions": ["time.query", "activity.operation"],
+  "disableBackHistoryAPI": true
+}

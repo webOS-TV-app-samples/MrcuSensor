@@ -1,0 +1,22 @@
+/* STEP COUNT */
+.step_wrapper {
+  font-size: 32px;
+}
+
+.step_wrapper .cnt_wrapper {
+  display: none;
+  align-items: center;
+}
+
+.step_wrapper .step_guide {
+  margin: 20px 0;
+}
+
+.step_wrapper .cnt_wrapper .cnt_box {
+  display: flex;
+  width: 84px;
+  margin-left: 10px;
+  align-items: center;
+  color: #ffffff;
+  font-size: 56px;
+}

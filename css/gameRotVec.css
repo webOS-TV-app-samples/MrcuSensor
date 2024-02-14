@@ -1,0 +1,47 @@
+/* GAME ROTATION VECTOR - CANVAS */
+.grv_wrapper .canvas_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.grv_wrapper .canvas_wrapper .canvas_title {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* GAME ROTATION VECTOR - SEONSOR DATA */
+.grv_wrapper .sensor_data {
+  display: none;
+}
+
+.grv_wrapper .sensor_data .item_w {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.grv_wrapper .sensor_data .item_w .item_title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.grv_wrapper .sensor_data .item_w .item_content {
+  display: flex;
+}
+
+.grv_wrapper .sensor_data .item_w .item_content .item {
+  width: 210px;
+  margin-right: 40px;
+}
+
+.grv_wrapper .sensor_data .item_w .item_content .item:last-child {
+  margin-right: 0;
+}
