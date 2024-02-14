@@ -33,8 +33,8 @@ This project visualized the sensor data received from MRCU in this following:
 Clone the repository and cd into the cloned directory.
 
 ```
-git clone http://mod.lge.com/hub/advprod-swdev-app/com.test.app.mrcu-sensor.git
-cd com.test.app.mrcu-sensor
+git clone https://github.com/webOS-TV-app-samples/MrcuSensor.git
+cd MrcuSensor
 ```
 
 ### App Package & Install
